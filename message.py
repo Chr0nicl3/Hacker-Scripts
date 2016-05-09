@@ -11,8 +11,8 @@ driver.get('http://site21.way2sms.com/content/index.html')
 username = driver.find_element_by_name("username")
 password = driver.find_element_by_name("password")
 
-username.send_keys('8962411778')
-password.send_keys('karan0912')
+username.send_keys('your mobile number')
+password.send_keys('way2sms password')
 
 driver.find_element_by_id("loginBTN").click()
 driver.find_element_by_css_selector('input.button.br3').click()
@@ -27,6 +27,6 @@ while True:
     if len(msg)>140:
         print "Message is too long allowed limit is 140 characters and your message have %d characters"%(len(msg))
     else:
-        mobile.send_keys('9425115245')
+        mobile.send_keys('reciver mobile number')
         message.send_keys('%s')%(msg)
         driver.find_element_by_id('Send').click()
