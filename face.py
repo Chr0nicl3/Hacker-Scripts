@@ -21,12 +21,12 @@ browser.set_cookiejar(cookiejar)
 #authenticate
 browser.open('http://m.facebook.com/login.php')
 browser.select_form(nr=0)
-browser["email"] = 'uukaran1@gmail.com'
-browser["pass"] = 'Chr0n!cl3'
+browser["email"] = 'your e-mail id'
+browser["pass"] = 'password'
 response = browser.submit()
 
 #scrapping
-home = browser.open("https://m.facebook.com/messages/read/?tid=id.616722851766788&refid=11#fua").read()
+home = browser.open("https://m.facebook.com/messages/read/?tid=id.id_of_chat_you_want_to_message_to").read()
 soup = BeautifulSoup(home , 'lxml')
 #print soup.prettify()
 #for element in soup.(string=re.compile("sharma")):
@@ -35,5 +35,5 @@ soup = BeautifulSoup(home , 'lxml')
 #spamming
 while True:
     browser.select_form(nr=1)
-    browser["body"]='FUCK\nFUCK\nFUCK'
+    browser["body"]='message'
     browser.submit()
