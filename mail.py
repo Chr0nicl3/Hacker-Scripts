@@ -4,16 +4,16 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-me = "uukaran1@gmail.com"
-my_password = "karantripathi"
-you = "uukaran1@gmail.com"
+me = "your e-mail id"
+my_password = "password"
+you = "reciever email-id"
 
 msg = MIMEMultipart('alternative')
-msg['Subject'] = "Alert"
+msg['Subject'] = "subject"
 msg['From'] = me
 msg['To'] = you
 
-html = '<html><body><p>Hi, I have the following alerts for you!</p></body></html>'
+html = '<html><body><p>messsage</p></body></html>'
 part2 = MIMEText(html, 'html')
 
 msg.attach(part2)
